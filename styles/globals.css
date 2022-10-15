@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -20,7 +24,11 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: rgb(242, 242, 242);
+    background-image: linear-gradient(
+      180.4deg,
+      rgba(188, 120, 236, 1) -2.2%,
+      rgba(29, 133, 163, 1) 83.5%
+    );
   }
 }
