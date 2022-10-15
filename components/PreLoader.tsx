@@ -19,6 +19,8 @@ const PreLoader = (props: any) => (
     <rect x="0" y="71" rx="3" ry="3" width="37" height="11" />
     <rect x="18" y="23" rx="3" ry="3" width="140" height="11" />
     <rect x="166" y="23" rx="3" ry="3" width="173" height="11" />
+    <rect x="187" y="48" rx="3" ry="3" width="72" height="11" />
+    <rect x="18" y="48" rx="3" ry="3" width="100" height="11" />
   </ContentLoader>
 );
 

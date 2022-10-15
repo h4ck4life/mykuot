@@ -16,11 +16,11 @@ const Quote = () => {
   const renderQuote = () => {
     if (isLoaded) {
       return (
-        <div className="flex flex-col p-8">
+        <div className="flex flex-col p-8 max-w-2xl">
           <span className="my-2 text-4xl drop-shadow-sm">
             {results.content}
           </span>
-          <span className="my-2 drop-shadow-sm">{results.author}</span>
+          <span className="my-4 drop-shadow-sm italic">{results.author}</span>
         </div>
       );
     } else {
@@ -30,9 +30,6 @@ const Quote = () => {
 
   useEffect(() => {
     getQuote();
-    return () => {
-      console.log("cleanup");
-    };
   }, []);
 
   return renderQuote();
