@@ -3,8 +3,8 @@ import { Quote } from "../types/Quote";
 import PreLoader from "./PreLoader";
 
 type Props = {
-  refresh: () => {}
-}
+  refresh: () => {};
+};
 
 const Quote = () => {
   const [results, setResults] = useState({} as Quote);
@@ -20,7 +20,7 @@ const Quote = () => {
   const renderQuote = () => {
     if (isLoaded) {
       return (
-        <div className="flex flex-col p-8 max-w-2xl">
+        <div className="flex flex-col p-8 max-w-2xl transition-opacity duration-300 ease-in-out opacity-100">
           <span className="my-2 text-4xl drop-shadow-sm">
             {results.content}
           </span>
@@ -28,7 +28,11 @@ const Quote = () => {
         </div>
       );
     } else {
-      return <PreLoader />;
+      return (
+        <div className="transition-opacity duration-300 ease-in-out opacity-30">
+          <PreLoader />
+        </div>
+      );
     }
   };
 
