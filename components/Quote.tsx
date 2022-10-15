@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Quote } from "../types/Quote";
 import PreLoader from "./PreLoader";
 
+type Props = {
+  refresh: () => {}
+}
+
 const Quote = () => {
   const [results, setResults] = useState({} as Quote);
   const [isLoaded, setIsLoaded] = useState(false);

@@ -2,8 +2,14 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Quote from "../components/Quote";
+import { useState } from "react";
 
 const Home: NextPage = () => {
+  const [seed, setSeed] = useState(1);
+  const reset = () => {
+    setSeed(Math.random());
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,17 +18,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <Quote />
+      <main className={styles.main} onClick={reset}>
+        <Quote key={seed} />
       </main>
     </div>
   );
-};
-
-type Quote = {
-  author: string;
-  content: string;
-  length: number;
 };
 
 export default Home;
