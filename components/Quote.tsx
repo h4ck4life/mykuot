@@ -12,8 +12,12 @@ const Quote = () => {
 
   const getQuote = async () => {
     const quoteResponse = await fetch(`https://api.quotable.io/random`);
-    const data: Quote = await quoteResponse.json();
-    setResults(data);
+    if (quoteResponse.ok) {
+      const data: Quote = await quoteResponse.json();
+      setResults(data);
+    } else {
+      alert('Something is wrong, try again later.');
+    }
     setIsLoaded(true);
   };
 
