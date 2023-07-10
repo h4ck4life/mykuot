@@ -1,10 +1,4 @@
-# Node.js
-# Build a general Node.js project with npm.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
-trigger:
-- main
+# azure-pipelines.yml
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -12,4 +6,4 @@ pool:
 steps:
   - task: k6-load-test@0
     inputs:
-      filename: 'YOUR_K6_TEST_SCRIPT.js'
+      filename: 'perf-test.js'
