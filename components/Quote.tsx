@@ -29,7 +29,7 @@ const Quote = () => {
             {results.content}
           </span>
           <span className="my-4 drop-shadow-sm italic">{results.author}</span>
-          <footer className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-xs text-gray-600">
+          <footer className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-xs dark:text-gray-600 text-inherit">
             Made by{" "}
             <a
               href="https://x.com/h4ck4life"
